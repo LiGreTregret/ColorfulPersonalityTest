@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>カラフルパーソナリティ診断</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="tytle" class="visible">
+      <h1>カラフルパーソナリティ診断結果</h1>
+    </div>
+    <div id="result">
+      <p id="result1">あなたの性格タイプは</p>
+      <p id="result2"></p>
+      <p id="result3">であると診断されました</p>
+    </div>
+    <p id="ratio-headline">＜各要素の割合＞</p>
+    <div id="ratio">
+      <div id="favoriteworld" class="chart-container">
+        <span id="favoriteworld-label" class="bar-label"></span>
+        <div class="bar-bg" id="favoriteworld-bg">
+          <div class="bar-fill" id="favoriteworld-bar-fill"></div>
+          <div class="marker" id="favoriteworld-marker"></div>
+        </div>
+        <span id="favoriteworld-ratio-value" class="ratio-value">50%</span>
+      </div>
+      <div id="information" class="chart-container">
+        <span id="information-label" class="bar-label"></span>
+        <div class="bar-bg" id="information-bg">
+          <div class="bar-fill" id="information-bar-fill"></div>
+          <div class="marker" id="information-marker"></div>
+        </div>
+        <span id="information-ratio-value" class="ratio-value">50%</span>
+      </div>
+      <div id="decisions" class="chart-container">
+        <span id="decisions-label" class="bar-label"></span>
+        <div class="bar-bg" id="decisions-bg">
+          <div class="bar-fill" id="decisions-bar-fill"></div>
+          <div class="marker" id="decisions-marker"></div>
+        </div>
+        <span id="decisions-ratio-value" class="ratio-value">50%</span>
+      </div>
+      <div id="structure" class="chart-container">
+        <span id="structure-label" class="bar-label"></span>
+        <div class="bar-bg" id="structure-bg">
+          <div class="bar-fill" id="structure-bar-fill"></div>
+          <div class="marker" id="structure-marker"></div>
+        </div>
+        <span id="structure-ratio-value" class="ratio-value">50%</span>
+      </div>
+    </div>
+    <div id="feature">
+      <button id="feature-button"></button>
+    </div>
+    <div id="SNS">
+      <button id="X">
+        <img src="/images/logo-white.png" width="15" height="15">に結果をポストする
+      </button>
+    </div>
+    <div id="feedback">
+      <p id="headline-feedback">＜診断精度向上のためにフィードバックをお願いします＞</p>
+      <div id="pastresult" class="feedback-element">
+        <p id="headline-pastresult">
+          ・質問式での診断結果（これまでに出たタイプの中で最も自分に合っていると思うものを選んでください）：
+          <select id="select-pastresult">
+            <option value="never">診断したことがない</option>
+            <option value="ISTJ">ISTJ</option>
+            <option value="ISTP">ISTP</option>
+            <option value="ISFJ">ISFJ</option>
+            <option value="ISFP">ISFP</option>
+            <option value="INTJ">INTJ</option>
+            <option value="INTP">INTP</option>
+            <option value="INFJ">INFJ</option>
+            <option value="INFP">INFP</option>
+            <option value="ESTJ">ESTJ</option>
+            <option value="ESTP">ESTP</option>
+            <option value="ESFJ">ESFJ</option>
+            <option value="ESFP">ESFP</option>
+            <option value="ENTJ">ENTJ</option>
+            <option value="ENTP">ENTP</option>
+            <option value="ENFJ">ENFJ</option>
+            <option value="ENFP">ENFP</option>
+          </select>
+        </p>
+      </div>
+      <div id="star" class="feedback-element">
+        <p id="headline-star">・今回の診断結果がどのくらい自分の性格に合っていたか評価してください</p>
+        <span class="rate-wrap">
+          <div class="rate" id="rate"></div>
+          <input type="range" id="star-input" min="0" max="100" value="50" step="1">
+        </span>
+      </div>
+      <button id="send">フィードバックを送信する</button>
+    </div>
+    <script type="module" src="/src/result.ts"></script>
+  </body>
+</html>

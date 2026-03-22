@@ -1,13 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>colorful-personality-test</title>
+    <title>カラフルパーソナリティ診断</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="introduction" class="visible">
+      <h1>カラフルパーソナリティ診断</h1>
+      <p id="first-exp">表示された色がどのくらい好き（嫌い）か、スライドバーで回答してください。</p>
+      <p id="second-exp">もっと正確に診断したい方は、10問ずつ回答回数を増やすことができます。（100問まで）</p>
+      <p id="third-exp">16Personality風に各要素ごとの割合までが結果として表示されます。</p>
+    </div>
+    <button id="start-btn" class="visible">診断を開始する</button>
+    <div id="question" class="hidden">
+    </div>
+    <div id="select" class="hidden">
+      <button id="continue-btn">10問追加で回答する</button>
+      <button id="finish-btn">結果を見る</button>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
