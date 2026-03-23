@@ -36,8 +36,8 @@ let generatedRGB: number[][] = [];
 let lastPattern = 0;
 let patterns = [0, 1, 2, 3, 4, 5, 6, 7];
 let lastSoundValue: number | null = null;
-const moveSound = new Audio('/sounds/move.mp3');
-const stopSound = new Audio('/sounds/stop.mp3');
+const moveSound = new Audio('sounds/move.mp3');
+const stopSound = new Audio('sounds/stop.mp3');
 
 // 質問を追加する関数
 function addQuestion() {
@@ -239,7 +239,7 @@ function finish() {
     };
 
     localStorage.setItem('color_personality_test_result', JSON.stringify(diagnosisData));
-    window.location.href = 'result';
+    window.location.href = '../result/index.html';
 }
 
 startDiagnosis();

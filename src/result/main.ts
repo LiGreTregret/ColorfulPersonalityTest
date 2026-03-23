@@ -1,4 +1,4 @@
-import './result.css'
+import './style.css'
 import { supabase } from './supabaseClient';
 
 export interface Answer {
