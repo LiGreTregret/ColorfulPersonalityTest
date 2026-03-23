@@ -239,7 +239,7 @@ function finish() {
     };
 
     localStorage.setItem('color_personality_test_result', JSON.stringify(diagnosisData));
-    window.location.href = '../result/index.html';
+    window.location.href = '../result';
 }
 
 startDiagnosis();
