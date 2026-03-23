@@ -491,7 +491,7 @@ featureButton?.addEventListener('click', () => {
 const xButton = document.getElementById('X');
 xButton?.addEventListener('click', () => {
     const postText = `カラフルパーソナリティ診断で「${result["type"]}」と診断されました！`;
-    const shareUrl = window.location.origin;
+    const shareUrl = "https://ligretregret.github.io/ColorfulPersonalityTest/diagnosis/";
     const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(postText)}&url=${encodeURIComponent(shareUrl)}`;
     window.open(xUrl, '_blank', 'noreferrer');
 });
